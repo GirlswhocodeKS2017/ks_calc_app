@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        tools:context=".MainActivity"
+        android:background="@android:color/black">
+
+
+        <ImageView
+            android:src="@drawable/kate_spade_wall"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="38dp"
+            android:layout_below="@+id/addButton"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <EditText
+            android:id="@+id/num_input"
+            android:inputType="numberDecimal"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="enter a number"
+            android:textColorHint="@android:color/holo_green_light"
+            android:background="@android:color/black"
+            android:textColor="@android:color/holo_green_light"
+            android:textSize="26sp"
+        />
+
+        <EditText
+            android:id="@+id/num_input2"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/addButton"
+            android:hint="enter a number"
+            android:textColorHint="@android:color/holo_red_light"
+            android:inputType="numberDecimal"
+            android:background="@android:color/black"
+            android:textColor="@android:color/holo_red_light"
+            android:textSize="26sp"
+            />
+
+
+        <Button
+            android:onClick="add"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:padding="16sp"
+            android:text="+"
+            android:layout_below="@id/num_input"
+            android:id="@+id/addButton"
+            android:background="@drawable/roundbutton"
+            />
+
+        <Button
+            android:id="@+id/minusButton"
+            android:onClick="minus"
+            android:padding="16sp"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:text="-"
+            android:layout_toRightOf="@id/addButton"
+            android:layout_below="@id/num_input"
+            android:background="@drawable/roundbutton"
+            />
+
+
+
+        <Button
+            android:onClick="multiply"
+            android:id="@+id/multi"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_below="@id/num_input"
+            android:padding="16sp"
+            android:text="*"
+            android:layout_toRightOf="@+id/minusButton"
+            android:background="@drawable/roundbutton"
+            />
+
+
+        <Button
+            android:onClick="divide"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_below="@id/num_input"
+            android:layout_toRightOf="@id/multi"
+            android:text="/"
+            android:background="@drawable/roundbutton"
+            />
+
+
+
+    <TextView
+        android:id="@+id/answer_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:textSize="26sp"
+        android:text=""
+        android:padding="8dp"
+        android:textColor="@android:color/holo_blue_light"
+        android:background="@android:color/black"
+        android:gravity="right"
+        />
+
+
+
+</RelativeLayout>
